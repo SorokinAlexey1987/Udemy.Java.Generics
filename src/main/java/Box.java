@@ -1,15 +1,27 @@
-public class Box<T> {
-    private T object;
+import java.util.Map;
 
-    public Box(T object) {
-        this.object = object;
+public class Box<K, V> {
+    private K key;
+    private V value;
+
+    public Box(K key, V value) {
+        this.key = key;
+        this.value = value;
     }
 
-    public T getObject() {
-        return object;
+    public K getKey() {
+        return key;
     }
 
-    public void setObject(T object) {
-        this.object = object;
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
     }
 }

@@ -6,10 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BoxTest {
     @Test
     public void testBox() {
-        Box<Integer> box1 = new Box<>(20);
-        Box<Integer> box2 = new Box<>(10);
+
+        Box<String, Integer> box1 = new Box<>("fkfjrv", 20);
+        Box<String, Integer> box2 = new Box<>("fkfjrv", 10);
         int expected = 30;
-        int result = box1.getObject() + box2.getObject();
+        int result = box1.getValue() + box2.getValue();
         assertEquals(expected, result);
     }
 }
