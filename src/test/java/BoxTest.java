@@ -7,10 +7,10 @@ public class BoxTest {
     @Test
     public void testBox() {
 
-        Box<String, Integer> box1 = new Box<>("fkfjrv", 20);
-        Box<String, Integer> box2 = new Box<>("fkfjrv", 10);
-        int expected = 30;
-        int result = box1.getValue() + box2.getValue();
+        Box<String, Integer, Float> box1 = new Box<>("fkfjrv", 20, 30f);
+        Box<String, Integer, Float> box2 = new Box<>("fkfjrv", 10, 40f);
+        int expected = 100;
+        float result = box1.getValue() + box2.getValue() + box1.getValue2() + box2.getValue2();
         assertEquals(expected, result);
     }
 }

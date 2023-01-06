@@ -1,13 +1,9 @@
 import java.util.Map;
 
-public class Box<K, V> {
+public class Box<K,V,T> {
     private K key;
     private V value;
-
-    public Box(K key, V value) {
-        this.key = key;
-        this.value = value;
-    }
+    private T value2;
 
     public K getKey() {
         return key;
@@ -23,5 +19,19 @@ public class Box<K, V> {
 
     public void setValue(V value) {
         this.value = value;
+    }
+
+    public T getValue2() {
+        return value2;
+    }
+
+    public void setValue2(T value2) {
+        this.value2 = value2;
+    }
+
+    public Box(K key, V value, T value2) {
+        this.key = key;
+        this.value = value;
+        this.value2 = value2;
     }
 }
