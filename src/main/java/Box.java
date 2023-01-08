@@ -1,4 +1,5 @@
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 
 public class Box<T extends Number & Comparable<T>> {
@@ -33,5 +34,13 @@ public class Box<T extends Number & Comparable<T>> {
         } else {
             return 0;
         }
+    }
+
+    public static void method(List<Number> numbers) {
+
+    }
+
+    public static void method2(List<? extends Number> numbers) {
+
     }
 }
