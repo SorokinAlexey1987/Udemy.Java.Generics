@@ -36,11 +36,16 @@ public class Box<T extends Number & Comparable<T>> {
         }
     }
 
-    public static void method(List<Number> numbers) {
+    public static void method(List<? extends Number> numbers) {
 
     }
 
-    public static void method2(List<? extends Number> numbers) {
+    public static <U> U getFirstElement(List<U> list) {
+        return list.get(0);
+    }
 
+    public static <U> void transfer(List<? extends U> src, List<? super U> dst) {
+        dst.addAll(src);
+        src.clear();
     }
 }

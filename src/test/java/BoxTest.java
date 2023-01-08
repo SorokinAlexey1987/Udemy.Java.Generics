@@ -14,6 +14,15 @@ public class BoxTest {
         assertEquals(0, box.compare(box2));
 
         List<Integer> numbers = new ArrayList<>();
-        Box.method2(numbers);
+        Box.method(numbers);
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add(i);
+        }
+
+        List<Number> numbers2 = new ArrayList<>();
+        Box.transfer(numbers, numbers2);
+        assertEquals(0, numbers.size());
+        assertEquals(10, numbers2.size());
     }
 }
